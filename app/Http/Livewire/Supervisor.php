@@ -8,6 +8,6 @@ class Supervisor extends Component
 {
     public function render()
     {
-        return view('livewire.supervisor');
+        return view('livewire.supervisor')->layout('adminlte::page');
     }
 }

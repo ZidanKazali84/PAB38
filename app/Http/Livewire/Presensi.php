@@ -8,6 +8,6 @@ class Presensi extends Component
 {
     public function render()
     {
-        return view('livewire.presensi');
+        return view('livewire.presensi')->layout('adminlte::page');
     }
 }

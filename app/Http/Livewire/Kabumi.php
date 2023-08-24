@@ -8,6 +8,6 @@ class Kabumi extends Component
 {
     public function render()
     {
-        return view('livewire.kabumi');
+        return view('livewire.kabumi')->layout('adminlte::page');
     }
 }

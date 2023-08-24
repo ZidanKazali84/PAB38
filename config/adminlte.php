@@ -307,36 +307,42 @@ return [
         [
             'text'        => 'Admin Panel',
             'route'      => 'admin',
-            'icon'        => 'far fa-fw fa-user',
+            'icon'        => 'fas fa-fw fa-user-tie',
+            'icon_color' => 'yellow',
         ],
         [
             'text'        => 'Verifikasi Absensi',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-user',
+            'route'      => 'verify',
+            'icon'        => 'fas fa-fw fa-pen-nib',
+            'icon_color' => 'green',
            
         ],
         ['header' => 'Menu'],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'route'=> 'profile',
             'icon' => 'fas fa-fw fa-user',
+            'icon_color' => 'blue',
         ],
         [
             'text' => 'Presensi',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'route'=> 'presensi',
+            'icon' => 'fas fa-fw fa-user-check',
+            'icon_color' => 'green',
         ],
         
         ['header' => 'Kabumi'],
         [
             'text'       => 'Informasi ',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'icon_color' => 'red',
+            'route'=> 'kabumi',
+            'icon' => 'fas fa-fw fa-book',
         ],
         [
             'text'       => 'E-KTA',
             'icon_color' => 'yellow',
-            'url'        => '#',
+            'route'=> 'kta',
+            'icon' => 'fas fa-fw fa-id-card',
         ],
        
     ],
