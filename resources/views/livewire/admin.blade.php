@@ -17,14 +17,15 @@
             </div>
             <div class="card-body ">
                 <div class="row">
-                    <div class="col-md-3 mb-3">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId1">
+                    <br>
+                    <br>
+                    <div style="margin-left:50pt;padding: 10pt">
+                        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#modelId1">
                             Informasi Beranda
                         </button>
-                        <!-- Modal -->
+                        <!-- Modal 1 -->
                         <div class="modal fade" id="modelId1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId1" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
+                            <div class="modal-dialog modal-xl" role="document">                                <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Informasi Beranda</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -33,23 +34,27 @@
                                     </div>
                                     <div class="modal-body">
                                         Konten untuk Informasi Beranda
+                                        <button type="button" class="btn btn-success">Add</button>
+                                        <button type="button" class="btn btn-danger">Delete</button>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                        <div class="row">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
-                    <div class="col-md-3 mb-3">
-                        <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#modelId2">
+                                
+                    <div style="padding: 10pt">
+                        <button type="button" class="btn btn-success " data-toggle="modal" data-target="#modelId2">
                             Informasi Kabumi
                         </button>
-                        <!-- Modal -->
+                        <!-- Modal 2 -->
                         <div class="modal fade" id="modelId2" tabindex="-1" role="dialog" aria-labelledby="modelTitleId2" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
+                            <div class="modal-dialog modal-xl" role="document">                                <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Informasi Kabumi</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -58,23 +63,27 @@
                                     </div>
                                     <div class="modal-body">
                                         Konten untuk Informasi Kabumi
+                                        <button type="button" class="btn btn-success">Add</button>
+                                        <button type="button" class="btn btn-danger">Delete</button>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                        <div class="row">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
-                    <div class="col-md-3 mb-3">
-                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modelId3">
+                                
+                    <div style="padding: 10pt">
+                        <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#modelId3">
                             Presensi
                         </button>
-                        <!-- Modal -->
+                        <!-- Modal 3 -->
                         <div class="modal fade" id="modelId3" tabindex="-1" role="dialog" aria-labelledby="modelTitleId3" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
+                            <div class="modal-dialog modal-xl" role="document">                                <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Presensi</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -83,17 +92,62 @@
                                     </div>
                                     <div class="modal-body">
                                         Konten untuk Presensi
+                                        <button type="button" class="btn btn-success">Add</button>
+                                        <button type="button" class="btn btn-danger">Delete</button>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                        <div class="row">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                
+                    <div style="padding: 10pt">
+                        <button type="button" class="btn btn-info " data-toggle="modal" data-target="#modelId4">
+                            Agenda
+                        </button>
+                        <!-- Modal 4 -->
+                        <div class="modal fade" id="modelId4" tabindex="-1" role="dialog" aria-labelledby="modelTitleId4" aria-hidden="true">
+                            <div class="modal-dialog modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Agenda</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    Konten dan fitur Agenda
+                                                    <button type="button" class="btn btn-success">Add</button>
+                                                    <button type="button" class="btn btn-danger">Delete</button>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="modal-footer">
+                                               <div class="row">
+                                                <button type="button" class="btn btn-primary">Save</button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
+                                               </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <br>
+                <div>
+                    @livewire('admin.idx')
+                </div>
                 
-                @livewire('admin.idx')
             </div>
         </div>
     </div>

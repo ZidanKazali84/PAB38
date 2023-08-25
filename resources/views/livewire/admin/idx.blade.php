@@ -1,44 +1,45 @@
-<div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item ">
-                    <a class="nav-link" id="User-tab" href="#" style="cursor:pointer" wire:click="selectMenu('User')" data-toggle="tab" role="tab" aria-controls="User" aria-selected="true">User Panel</a>
+                <li class="nav-item">
+                    <a class="nav-link active" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="true">User</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="Data-tab" href="#" style="cursor:pointer" wire:click="selectMenu('Data')" data-toggle="tab" role="tab" aria-controls="Data" aria-selected="false">Arsip</a>
+                    <a class="nav-link" id="arsip-tab" data-toggle="tab" href="#arsip" role="tab" aria-controls="arsip" aria-selected="false">Arsip</a>
                 </li>
             </ul>
-        </div>
-    </nav>
-    <div class="card">
-        <div class="card-body">
-            <div class="col-lg-12">
-                <div x-data>
-                    <div x-show="UserTab">
-                        <livewire:admin.user :wire:key="'admin-user'">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
+                    <!-- Konten tab User -->
+                    <div class="container">
+                        @livewire('admin.user')
+                        <!-- Tambahkan konten sesuai kebutuhan -->
                     </div>
                 </div>
-                <div x-data>
-                    <div x-show="DataTab">
-                        <livewire:admin.pembukuan :wire:key="'admin-pembukuan'">
+                <div class="tab-pane fade" id="arsip" role="tabpanel" aria-labelledby="arsip-tab">
+                    <!-- Konten tab Arsip -->
+                    <div class="container">
+                       @livewire('admin.data')
+                        <!-- Tambahkan konten sesuai kebutuhan -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @push('script')
-    <script>
-        $(document).ready(function () {
-            window.livewire.on('DataActive', () => {
-                $('#Data-tab').addClass('active');
-                $('#User-tab').removeClass('active');
-            });
-            window.livewire.on('UserActive', () => {
-                $('#User-tab').addClass('active');
-                $('#Data-tab').removeClass('active');
-            });
-        });
-    </script>
-    @endpush
 </div>
+
+
+@push('scripts')
+<script>
+       document.getElementById('refreshButton').addEventListener('click', function() {
+            location.reload();
+        });
+    $(document).ready(function() {
+        $('#myTab a').on('click', function(e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
+@endpush

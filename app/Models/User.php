@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-
-class User extends Authenticatable
+use Laratrust\Contracts\LaratrustUser;
+use Laratrust\Traits\HasRolesAndPermissions;
+class User extends Authenticatable implements LaratrustUser
 {
+    use HasRolesAndPermissions;
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -22,7 +24,7 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
+    
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -42,4 +44,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function tugas(){
+        return $this->belongsToMany(Role::class);
+    }
 }

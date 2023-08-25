@@ -2,31 +2,44 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\User;
 use Livewire\Component;
 
 class Idx extends Component
 {
    
-    public $UserTab = false;
-    public $DataTab = false;
+    public $users;
+    public $showAddUserModal = false;
+    public $newUserName;
+    public $newUserEmail;
+    public $confirmingUserDeletion = false;
+    public $userToDelete;
     public function render()
     {
         return view('livewire.admin.idx');
     }
-    public function selectMenu($menu){
-        if(!is_null($menu)){
-            if($menu == 'Data'){
-                $this->emit('selectMenu', $menu);
-                $this->DataTab = true;
-                $this->UserTab = false;
-            }
-            if($menu == 'User'){
-                $this->emit('selectMenu', $menu);
-                $this->DataTab = false;
-                $this->UserTab = true;
-                
-            }
-           
-        }
+   
+    public function confirmDeleteUser($userId)
+    {
+        $this->userToDelete = $userId;
+        User::destroy($this->userToDelete);
+
+        $this->emit('userDeleted');
+        $this->confirmingUserDeletion = false;
+        
+    }
+
+    public function deleteUser()
+    {
+        User::destroy($this->userToDelete);
+
+        $this->emit('userDeleted');
+        $this->confirmingUserDeletion = false;
+    }
+
+    public function resetInput()
+    {
+        $this->newUserName = '';
+        $this->newUserEmail = '';
     }
 }
