@@ -66,6 +66,7 @@ return [
     'logo' => '<b>KABUMI</b>UPI',
     'logo_img' => 'vendor/adminlte/dist/img/UPI.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img_class2' => 'image',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'Admin Logo',
@@ -188,6 +189,7 @@ return [
 
     'classes_body' => '',
     'classes_brand' => '',
+    'classes_brand2' => 'd-flex justify-content-center align-items-center bg-red', // Untuk menengahkan logo
     'classes_brand_text' => 'text-yellow',
     'classes_content_wrapper' => 'bg-yellow',
     'classes_content_header' => 'bg-yellow',
@@ -300,10 +302,7 @@ return [
        
 
         // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+        ['header' => 'Tool'],
         [
             'text'        => 'Admin Panel',
             'route'      => 'admin',
