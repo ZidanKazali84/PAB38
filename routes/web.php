@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('welcome');
+})->name('auth')->middleware('auth');
 Route::get('/home', function () {
-    return redirect()->route('home');
-});
+    return view('home');
+})->name('home') ;
+Auth::routes();
+Route::get('/logout', function () {
+    \Session::flush();
+    auth()->logout();
+    return redirect('/login');
+})->name('logout');
 //Admin
 Route::get('/admin-panel',\App\Http\Livewire\Admin::class)->name('admin');
 //verify

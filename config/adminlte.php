@@ -189,7 +189,7 @@ return [
 
     'classes_body' => '',
     'classes_brand' => '',
-    'classes_brand2' => 'd-flex justify-content-center align-items-center bg-red', // Untuk menengahkan logo
+    'classes_brand2' => 'd-flex justify-content-center align-items-center ', // Untuk menengahkan logo
     'classes_brand_text' => 'text-yellow',
     'classes_content_wrapper' => 'bg-yellow',
     'classes_content_header' => 'bg-yellow',
@@ -295,8 +295,8 @@ return [
         // Navbar items:
         [
             'text' => 'user',
-           
-            'icon' => 'fas fa-fw fa-user',
+            'route'=> 'profile',
+            'icon' => 'fas fa-fw fa-user text-blue',
             'topnav_right' => true,
         ],
        
